@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {  View,Text, StyleSheet,Image,TouchableOpacity  } from 'react-native';
 import { Container,Actions,Button,DrawerHeader,List,ListItem,Left,Body, Footer, FooterTab, Header, Content, Item, Input, Icon, Form, Label } from 'native-base';
 import { NavigationActions } from 'react-navigation';
-
+const routes = ["Dashboard", "Profile"];
 export default class Menu extends Component {
      
     constructor(props) {
@@ -19,7 +19,7 @@ export default class Menu extends Component {
                      <View style={styles.hold}>
                                  <View style={styles.inner}>
                                         <TouchableOpacity style={styles.checkbox}
-                                             onPress={() => this.props.navigation.navigate('Signup')}        >
+                                            onPress={() => this.props.navigation.navigate('Profile')}        >
                                             <Icon active name='md-check-circle' style={styles.white} />
                                         </TouchableOpacity>
                                   </View>

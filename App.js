@@ -29,7 +29,7 @@ import Success from './screen/Signup/Success';
 import Createpin from './screen/Signup/Createpin';
 
 //Dashboard Screen
-import Dashboard from './screen/Dashboard';
+import Dashboardindex from './screen/Dashboardindex';
 
 
 //Report issues
@@ -129,8 +129,8 @@ const RootStack = StackNavigator(
          },
     },
 
-    Dashboard: {
-      screen: Dashboard,
+    Dashboardindex: {
+      screen: Dashboardindex,
         navigationOptions: {
             header: null, 
          },
@@ -181,7 +181,7 @@ const RootStack = StackNavigator(
     
   },
   {
-    initialRouteName: 'Getstarted',
+    initialRouteName: 'Dashboardindex',
   }
 );
 

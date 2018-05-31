@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 import {  View,Text, StyleSheet,Image,ImageBackground,TouchableHighlight,TouchableOpacity  } from 'react-native';
 import { Drawer, Container,Button, Footer, FooterTab, Header, Content, Item, Input, Icon, Form, Label } from 'native-base';
 
-import SideBar from './components/Menu';
 import Footerstack from './components/Footer';
+import Meunbutton from './components/Meunbutton';
+import Dashboardicon from './components/Dashboardicon';
+
 
 export default class Dashboard extends Component {
-    closeDrawer() {
-        this._drawer._root.close()
-      }
-      openDrawer() {
-        this._drawer._root.open()
-      }
+
 
       
   constructor(props) {
@@ -21,24 +18,18 @@ export default class Dashboard extends Component {
 
 
   render() {  
-    const { goBack } = this.props.navigation;
+ 
     return (
-        <Drawer
-        ref={(ref) => { this._drawer = ref; }}
-        content={<SideBar navigator={this._navigator} />}
-        onClose={() => this.closeDrawer()} >
-      
-      <View
+       <View
       style={styles.container}>
       
             <TouchableOpacity style={styles.navigate}
-            onPress={()=> this.openDrawer()} >
-                   <Image style={styles.stackicon} source={require('./assets/menu.png')}/>
+              onPress={() => this.props.navigation.navigate("DrawerOpen")}>
+                 <Meunbutton/>
              </TouchableOpacity>
 
             <View style={styles.contentid}> 
-                     <Image style={styles.yippy} source={require('./assets/message-empty.png')}/>
-
+                   <Dashboardicon/>
                     <Text style={styles.yippytextsub}>
                         You currently have no loan 
                         
@@ -62,7 +53,7 @@ export default class Dashboard extends Component {
          
         <Footerstack />
     </View>
-    </Drawer>
+  
     );
   }
 }

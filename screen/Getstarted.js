@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
    },
    bottom:{
        flex:1,
-       backgroundColor:'#d66c04',
+       backgroundColor:'#f27700',
        justifyContent:'center',
     flexDirection:'column'
     
@@ -92,7 +92,7 @@ bo:{
     flex:2,
     justifyContent:'center',
     flexDirection:'column',
-    backgroundColor:'#d66c04'
+   
 },
 bo1:{
     flex:1,
